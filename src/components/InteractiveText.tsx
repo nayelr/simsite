@@ -30,6 +30,22 @@ const TextContent = styled(motion.h1)`
   letter-spacing: -0.05em;
   transform-origin: center;
   line-height: 0.9;
+
+  /* Responsive text sizes */
+  @media (max-width: 1024px) {
+    font-size: 6rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 35px rgba(0, 200, 255, 0.7), 0 0 60px rgba(0, 180, 255, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 25px rgba(0, 200, 255, 0.7), 0 0 40px rgba(0, 180, 255, 0.5);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 200, 255, 0.7), 0 0 30px rgba(0, 180, 255, 0.5);
+  }
 `;
 
 // Constants for animation

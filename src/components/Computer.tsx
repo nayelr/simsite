@@ -25,6 +25,19 @@ const ComputerFrame = styled.div`
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   max-width: 1600px;
   border: 2px solid #333;
+
+  @media (max-width: 768px) {
+    width: 95vw;
+    height: 70vh;
+    padding: 12px;
+  }
+
+  @media (max-width: 480px) {
+    width: 98vw;
+    height: 60vh;
+    padding: 8px;
+    border-radius: 12px;
+  }
 `;
 
 const ComputerScreen = styled.div`
@@ -38,6 +51,10 @@ const ComputerScreen = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid #444;
+
+  @media (max-width: 480px) {
+    border-radius: 8px;
+  }
 `;
 
 const ComputerBase = styled.div`
@@ -50,11 +67,18 @@ const ComputerBase = styled.div`
   position: relative;
   border: 2px solid #333;
   border-top: none;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    height: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 60%;
+    height: 15px;
+    border-radius: 0 0 10px 10px;
+  }
 `;
-
-
-
-
 
 const Computer: React.FC = () => {
   return (
@@ -64,7 +88,6 @@ const Computer: React.FC = () => {
           <ComputerScreen>
             <InteractiveText />
           </ComputerScreen>
-
         </ComputerFrame>
         <ComputerBase />
       </div>
