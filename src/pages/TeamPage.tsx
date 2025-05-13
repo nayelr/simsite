@@ -111,7 +111,7 @@ const TeamPage: React.FC = () => {
       role: "Vice President",
       description: "Helping coordinate club activities and support the leadership team.",
       imageUrl: "/will.png",
-      imagePosition: "center 35%"
+      imagePosition: "center 15%"
     },
     {
       id: 3,
