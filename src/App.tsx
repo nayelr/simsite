@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import HomePage from './pages/HomePage';
 import MediaPage from './pages/MediaPage';
 import TeamPage from './pages/TeamPage';
@@ -53,6 +54,7 @@ function App() {
           <Route path="/media" element={<MediaPage />} />
           <Route path="/team" element={<TeamPage />} />
         </Routes>
+        <SpeedInsights />
       </div>
     </Router>
   );
