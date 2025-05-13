@@ -16,12 +16,67 @@ const AboutContainer = styled.section`
   z-index: 1;
 `;
 
-const AboutContent = styled.div`
-  max-width: 800px;
-  text-align: center;
-  color: #fff;
+const ContentWrapper = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
   position: relative;
   z-index: 2;
+  
+  @media (max-width: 968px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+`;
+
+const AboutContent = styled.div`
+  flex: 1;
+  text-align: left;
+  color: #fff;
+  
+  @media (max-width: 968px) {
+    text-align: center;
+  }
+`;
+
+const ImageContainer = styled(motion.div)`
+  flex: 1;
+  max-width: 500px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 968px) {
+    width: 100%;
+    height: 300px;
+  }
 `;
 
 const AboutTitle = styled(motion.h2)`
@@ -71,47 +126,58 @@ const AboutSection: React.FC = () => {
         }}
       />
       
-      <AboutContent>
-        <AboutTitle
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+      <ContentWrapper>
+        <AboutContent>
+          <AboutTitle
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            About Simulations Club
+          </AboutTitle>
+          
+          <AboutText
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Thomas Jefferson High School For Science and Technology's simulations club 
+            builds computer programs and other programmable simulations and games 
+            that help us gain a greater understanding of the world around us and 
+            the processes that govern our lives.
+          </AboutText>
+          
+          <AboutText
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Want to improve your understanding of the world around you, strengthen 
+            your resume, and network with like-minded individuals? Show up to a meeting!
+          </AboutText>
+          
+          <CallToAction
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            We meet every Wednesday A to discuss our findings and share our work.
+          </CallToAction>
+        </AboutContent>
+
+        <ImageContainer
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          About Simulations Club
-        </AboutTitle>
-        
-        <AboutText
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          Thomas Jefferson High School For Science and Technology's simulations club 
-          builds computer programs and other programmable simulations and games 
-          that help us gain a greater understanding of the world around us and 
-          the processes that govern our lives.
-        </AboutText>
-        
-        <AboutText
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          Want to improve your understanding of the world around you, strengthen 
-          your resume, and network with like-minded individuals? Show up to a meeting!
-        </AboutText>
-        
-        <CallToAction
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          We meet every Wednesday A to discuss our findings and share our work.
-        </CallToAction>
-      </AboutContent>
+          <img src="/club.jpg" alt="TJ Simulations Club" />
+        </ImageContainer>
+      </ContentWrapper>
     </AboutContainer>
   );
 };
