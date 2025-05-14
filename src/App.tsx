@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import HomePage from './pages/HomePage';
 import MediaPage from './pages/MediaPage';
 import TeamPage from './pages/TeamPage';
+import MontyHallPage from './pages/MontyHallPage';
 import NavBar from './components/NavBar';
 
 const GlobalStyle = createGlobalStyle`
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/team" element={<TeamPage />} />
+          <Route path="/montyhall" element={<MontyHallPage />} />
         </Routes>
         <SpeedInsights />
       </div>

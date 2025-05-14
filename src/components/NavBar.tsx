@@ -105,6 +105,9 @@ const NavBar: React.FC = () => {
       <NavLink to="/team" className={location.pathname === "/team" ? "active" : ""}>
         Team
       </NavLink>
+      <NavLink to="/montyhall" className={location.pathname === "/montyhall" ? "active" : ""}>
+        Monty Hall
+      </NavLink>
     </NavContainer>
   );
 };
