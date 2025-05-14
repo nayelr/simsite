@@ -200,6 +200,14 @@ const TeamPage: React.FC = () => {
       description: "Documenting club activities and maintaining the club's history.",
       imageUrl: "/aayush.jpg",
       imagePosition: "center 25%"
+    },
+    {
+      id: 14,
+      name: "Faraaz Rattani",
+      role: "Head of AI",
+      description: "Leading AI initiatives and projects within the club.",
+      imageUrl: "/faraaz.png",
+      imagePosition: "center 25%"
     }
   ];
   
