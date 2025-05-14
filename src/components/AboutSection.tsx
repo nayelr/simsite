@@ -175,7 +175,7 @@ const AboutSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <img src="/club.jpg" alt="TJ Simulations Club" />
+          <img src="/SimulationsClub2025.jpg" alt="TJ Simulations Club" />
         </ImageContainer>
       </ContentWrapper>
     </AboutContainer>
