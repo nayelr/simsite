@@ -208,6 +208,13 @@ const TeamPage: React.FC = () => {
       description: "Leading AI initiatives and projects within the club.",
       imageUrl: "/faraaz.png",
       imagePosition: "center 25%"
+    },
+    {
+      id: 15,
+      name: "Swaraj Sainani",
+      role: "Director of Internal Communications",
+      description: "Managing internal communication and ensuring effective information flow within the club.",
+      imagePosition: "center 25%"
     }
   ];
   
