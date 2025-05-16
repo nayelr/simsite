@@ -21,6 +21,54 @@ const Title = styled(motion.h1)`
   text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 `;
 
+const MascotSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+`;
+
+const MascotContainer = styled(motion.div)`
+  max-width: 300px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 255, 0.2);
+  margin-bottom: 1rem;
+`;
+
+const MascotPhoto = styled.div`
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+`;
+
+const MascotTitle = styled.h2`
+  color: #0ff;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+`;
+
+const MascotSubtitle = styled.p`
+  color: #ccc;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+`;
+
 const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -215,7 +263,7 @@ const TeamPage: React.FC = () => {
       role: "Director of Internal Communications",
       description: "Managing internal communication and ensuring effective information flow within the club.",
       imagePosition: "center 25%"
-    }
+    } 
   ];
   
   return (
@@ -228,6 +276,20 @@ const TeamPage: React.FC = () => {
         >
           Meet the team
         </Title>
+        
+        <MascotSection>
+          <MascotContainer
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <MascotPhoto>
+              <img src="/nivaan.png" alt="Nivaan Kaushal" />
+            </MascotPhoto>
+          </MascotContainer>
+          <MascotTitle>Nivaan Kaushal</MascotTitle>
+          <MascotSubtitle>Official Club Mascot</MascotSubtitle>
+        </MascotSection>
         
         <TeamGrid>
           {teamMembers.map((member, index) => (

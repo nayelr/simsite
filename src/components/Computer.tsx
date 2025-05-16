@@ -43,7 +43,7 @@ const ComputerFrame = styled.div`
 const ComputerScreen = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -51,6 +51,21 @@ const ComputerScreen = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid #444;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/nivaan.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    filter: grayscale(20%) blur(1px) brightness(1.2);
+    z-index: 1;
+  }
 
   @media (max-width: 480px) {
     border-radius: 8px;
@@ -80,13 +95,18 @@ const ComputerBase = styled.div`
   }
 `;
 
+const StyledInteractiveText = styled(InteractiveText)`
+  position: relative;
+  z-index: 2;
+`;
+
 const Computer: React.FC = () => {
   return (
     <ComputerContainer>
       <div>
         <ComputerFrame>
           <ComputerScreen>
-            <InteractiveText />
+            <StyledInteractiveText />
           </ComputerScreen>
         </ComputerFrame>
         <ComputerBase />
