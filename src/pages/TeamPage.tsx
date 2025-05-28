@@ -263,6 +263,27 @@ const TeamPage: React.FC = () => {
       role: "Director of Internal Communications",
       description: "Managing internal communication and ensuring effective information flow within the club.",
       imagePosition: "center 25%"
+    },
+    {
+      id: 16,
+      name: "Sahas Reddy",
+      role: "Head of Fundraising",
+      description: "Managing fundraising initiatives and coordinating with sponsors and donors.",
+      imagePosition: "center 25%"
+    },
+    {
+      id: 17,
+      name: "Kartikeya Dobhal",
+      role: "Director of External Communications",
+      description: "Managing external communications and building relationships with external organizations and stakeholders.",
+      imagePosition: "center 25%"
+    },
+    {
+      id: 18,
+      name: "Aditya Alaparti",
+      role: "Head of Community Engagement",
+      description: "Leading community engagement initiatives and fostering connections within the club and broader community.",
+      imagePosition: "center 25%"
     } 
   ];
   
