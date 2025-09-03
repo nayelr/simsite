@@ -221,6 +221,7 @@ const TeamPage: React.FC = () => {
       name: "Amrit Singh",
       role: "Director of Spikeball",
       description: "Leading the spikeball program and team development.",
+      imageUrl: "/Amrit_Singh.jpeg",
       imagePosition: "center 25%"
     }
   ];
