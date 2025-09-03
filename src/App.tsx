@@ -7,6 +7,7 @@ import MediaPage from './pages/MediaPage';
 import TeamPage from './pages/TeamPage';
 import MontyHallPage from './pages/MontyHallPage';
 import NavBar from './components/NavBar';
+import SpikeballPage from './pages/SpikeballPage';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -55,6 +56,7 @@ function App() {
           <Route path="/media" element={<MediaPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/montyhall" element={<MontyHallPage />} />
+          <Route path="/spikeball" element={<SpikeballPage />} />
         </Routes>
         <SpeedInsights />
       </div>
