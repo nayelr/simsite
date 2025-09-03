@@ -215,6 +215,13 @@ const TeamPage: React.FC = () => {
       role: "Director of Internal Communications",
       description: "Managing internal communication and ensuring effective information flow within the club.",
       imagePosition: "center 25%"
+    },
+    {
+      id: 16,
+      name: "Amrit Singh",
+      role: "Director of Spikeball",
+      description: "Leading the spikeball program and team development.",
+      imagePosition: "center 25%"
     }
   ];
   
