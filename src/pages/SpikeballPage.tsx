@@ -44,18 +44,23 @@ const SpikeballPage: React.FC = () => {
         <section style={{ marginBottom: 28 }}>
           <h2 style={{ fontSize: 24, marginBottom: 12 }}>Varsity</h2>
           <h3 style={{ fontSize: 16, opacity: 0.8, marginBottom: 8 }}>Starting lineup</h3>
-          <ol style={{ listStyle: 'decimal', paddingLeft: 24, margin: 0, marginBottom: 12 }}>
-            {varsityStarting.map((player) => (
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginBottom: 12 }}>
+            {varsityStarting.map((player, index) => (
               <li key={player.name} style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
                 padding: '10px 12px',
                 borderRadius: 10,
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.06)',
-                marginBottom: 8,
-                fontWeight: 600
-              }}>{player.name}</li>
+                marginBottom: 8
+              }}>
+                <span style={{ width: 24, textAlign: 'right', opacity: 0.7, fontVariantNumeric: 'tabular-nums' }}>{index + 1}</span>
+                <span style={{ fontWeight: 600 }}>{player.name}</span>
+              </li>
             ))}
-          </ol>
+          </ul>
 
           <h3 style={{ fontSize: 16, opacity: 0.8, margin: '12px 0 8px' }}>Bench</h3>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
