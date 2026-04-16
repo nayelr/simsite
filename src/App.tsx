@@ -6,6 +6,11 @@ import HomePage from './pages/HomePage';
 import MediaPage from './pages/MediaPage';
 import TeamPage from './pages/TeamPage';
 import MontyHallPage from './pages/MontyHallPage';
+import BirthdayParadoxPage from './pages/BirthdayParadoxPage';
+import DLAPage from './pages/DLAPage';
+import LotkaVolterraPage from './pages/LotkaVolterraPage';
+import GameOfLifePage from './pages/GameOfLifePage';
+import GaltonBoardPage from './pages/GaltonBoardPage';
 import NavBar from './components/NavBar';
 
 const GlobalStyle = createGlobalStyle`
@@ -55,6 +60,11 @@ function App() {
           <Route path="/media" element={<MediaPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/montyhall" element={<MontyHallPage />} />
+          <Route path="/sim/birthday-paradox" element={<BirthdayParadoxPage />} />
+          <Route path="/sim/dla" element={<DLAPage />} />
+          <Route path="/sim/predator-prey" element={<LotkaVolterraPage />} />
+          <Route path="/sim/game-of-life" element={<GameOfLifePage />} />
+          <Route path="/sim/galton-board" element={<GaltonBoardPage />} />
         </Routes>
         <SpeedInsights />
       </div>
