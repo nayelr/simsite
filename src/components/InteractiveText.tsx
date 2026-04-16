@@ -76,19 +76,89 @@ const InteractiveText: React.FC = () => {
     size: { width: 0, height: 0 }
   });
   
-  // Normalize velocity to maintain constant speed
-  const normalizeVelocity = (velocity: {x: number, y: number}, speed: number) => {
-    const magnitude = Math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y);
-    if (magnitude < 0.001) return { x: speed, y: 0 };
-    
-    return {
-      x: (velocity.x / magnitude) * speed,
-      y: (velocity.y / magnitude) * speed
-    };
-  };
-  
   // Initialize animation
   useEffect(() => {
+    const normalizeVelocity = (velocity: {x: number, y: number}, speed: number) => {
+      const magnitude = Math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y);
+      if (magnitude < 0.001) return { x: speed, y: 0 };
+
+      return {
+        x: (velocity.x / magnitude) * speed,
+        y: (velocity.y / magnitude) * speed
+      };
+    };
+
+    const updatePositions = () => {
+      if (tjSimRef.current && wed8aRef.current) {
+        tjSimRef.current.style.transform = `translate3d(${tjSim.current.position.x}px, ${tjSim.current.position.y}px, 0) rotate(${tjSim.current.rotation}deg)`;
+        wed8aRef.current.style.transform = `translate3d(${wed8a.current.position.x}px, ${wed8a.current.position.y}px, 0) rotate(${wed8a.current.rotation}deg)`;
+      }
+    };
+
+    const processBounce = (
+      text: {
+        position: { x: number, y: number },
+        velocity: { x: number, y: number },
+        rotation: number,
+        rotationVelocity: number,
+        size: { width: number, height: number }
+      },
+      containerWidth: number,
+      containerHeight: number,
+      speed: number
+    ) => {
+      text.velocity = normalizeVelocity(text.velocity, speed);
+
+      text.position.x += text.velocity.x;
+      text.position.y += text.velocity.y;
+      text.rotation += text.rotationVelocity;
+
+      const maxX = containerWidth / 2 - text.size.width / 2;
+      const minX = -maxX;
+      const maxY = containerHeight / 2 - text.size.height / 2;
+      const minY = -maxY;
+
+      if (text.position.x > maxX) {
+        text.position.x = maxX;
+        text.velocity.x = -Math.abs(text.velocity.x);
+        text.rotationVelocity = -text.rotationVelocity;
+      } else if (text.position.x < minX) {
+        text.position.x = minX;
+        text.velocity.x = Math.abs(text.velocity.x);
+        text.rotationVelocity = -text.rotationVelocity;
+      }
+
+      if (text.position.y > maxY) {
+        text.position.y = maxY;
+        text.velocity.y = -Math.abs(text.velocity.y);
+        text.rotationVelocity = -text.rotationVelocity;
+      } else if (text.position.y < minY) {
+        text.position.y = minY;
+        text.velocity.y = Math.abs(text.velocity.y);
+        text.rotationVelocity = -text.rotationVelocity;
+      }
+    };
+
+    const animate = () => {
+      if (!containerRef.current) return;
+
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const containerWidth = containerRect.width;
+      const containerHeight = containerRect.height;
+
+      processBounce(tjSim.current, containerWidth, containerHeight, SPEED_TJ);
+      processBounce(wed8a.current, containerWidth, containerHeight, SPEED_WED);
+      updatePositions();
+
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
+
+    const startAnimation = () => {
+      if (animationFrameRef.current === null) {
+        animationFrameRef.current = requestAnimationFrame(animate);
+      }
+    };
+
     const initializeText = () => {
       // Random positions within view
       tjSim.current.position = {
@@ -146,94 +216,6 @@ const InteractiveText: React.FC = () => {
       }
     };
   }, []);
-  
-  // Update element positions
-  const updatePositions = () => {
-    if (tjSimRef.current && wed8aRef.current) {
-      tjSimRef.current.style.transform = `translate3d(${tjSim.current.position.x}px, ${tjSim.current.position.y}px, 0) rotate(${tjSim.current.rotation}deg)`;
-      wed8aRef.current.style.transform = `translate3d(${wed8a.current.position.x}px, ${wed8a.current.position.y}px, 0) rotate(${wed8a.current.rotation}deg)`;
-    }
-  };
-  
-  // Main animation loop
-  const animate = () => {
-    if (!containerRef.current) return;
-    
-    const containerRect = containerRef.current.getBoundingClientRect();
-    const containerWidth = containerRect.width;
-    const containerHeight = containerRect.height;
-    
-    // Process tj sim
-    processBounce(tjSim.current, containerWidth, containerHeight, SPEED_TJ);
-    
-    // Process wed 8a
-    processBounce(wed8a.current, containerWidth, containerHeight, SPEED_WED);
-    
-    // Update DOM elements
-    updatePositions();
-    
-    // Continue animation loop
-    animationFrameRef.current = requestAnimationFrame(animate);
-  };
-  
-  // Start animation loop
-  const startAnimation = () => {
-    if (animationFrameRef.current === null) {
-      animationFrameRef.current = requestAnimationFrame(animate);
-    }
-  };
-  
-  // Handle wall bounce for a text element
-  const processBounce = (
-    text: { 
-      position: { x: number, y: number },
-      velocity: { x: number, y: number },
-      rotation: number,
-      rotationVelocity: number,
-      size: { width: number, height: number }
-    },
-    containerWidth: number,
-    containerHeight: number,
-    speed: number
-  ) => {
-    // Ensure constant speed
-    text.velocity = normalizeVelocity(text.velocity, speed);
-    
-    // Update position
-    text.position.x += text.velocity.x;
-    text.position.y += text.velocity.y;
-    
-    // Update rotation
-    text.rotation += text.rotationVelocity;
-    
-    // Calculate bounds
-    const maxX = containerWidth / 2 - text.size.width / 2;
-    const minX = -maxX;
-    const maxY = containerHeight / 2 - text.size.height / 2;
-    const minY = -maxY;
-    
-    // Handle horizontal wall bounce
-    if (text.position.x > maxX) {
-      text.position.x = maxX;
-      text.velocity.x = -Math.abs(text.velocity.x);
-      text.rotationVelocity = -text.rotationVelocity;
-    } else if (text.position.x < minX) {
-      text.position.x = minX;
-      text.velocity.x = Math.abs(text.velocity.x);
-      text.rotationVelocity = -text.rotationVelocity;
-    }
-    
-    // Handle vertical wall bounce
-    if (text.position.y > maxY) {
-      text.position.y = maxY;
-      text.velocity.y = -Math.abs(text.velocity.y);
-      text.rotationVelocity = -text.rotationVelocity;
-    } else if (text.position.y < minY) {
-      text.position.y = minY;
-      text.velocity.y = Math.abs(text.velocity.y);
-      text.rotationVelocity = -text.rotationVelocity;
-    }
-  };
   
   return (
     <TextContainer ref={containerRef}>
