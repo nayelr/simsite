@@ -1,0 +1,40 @@
+{
+  "id": 5,
+  "title": "Chapter 5 — Supplementary exercises",
+  "meta": {
+    "pdfPage": 326,
+    "book": "Lay, Linear Algebra and Its Applications"
+  },
+  "preambles": [
+    {
+      "beforeItem": "a",
+      "text": "Throughout these supplementary exercises, A and B represent square matrices of appropriate sizes."
+    }
+  ],
+  "items": [
+    { "id": "a", "label": "1a", "text": "If A is invertible and 1 is an eigenvalue for A, then 1 is also an eigenvalue of A^-1.", "answer": true },
+    { "id": "b", "label": "1b", "text": "If A is row equivalent to the identity matrix I, then A is diagonalizable.", "answer": false },
+    { "id": "c", "label": "1c", "text": "If A contains a row or column of zeros, then 0 is an eigenvalue of A.", "answer": true },
+    { "id": "d", "label": "1d", "text": "Each eigenvalue of A is also an eigenvalue of A^2.", "answer": false },
+    { "id": "e", "label": "1e", "text": "Each eigenvector of A is also an eigenvector of A^2.", "answer": true },
+    { "id": "f", "label": "1f", "text": "Each eigenvector of an invertible matrix A is also an eigenvector of A^-1.", "answer": true },
+    { "id": "g", "label": "1g", "text": "Eigenvalues must be nonzero scalars.", "answer": false },
+    { "id": "h", "label": "1h", "text": "Eigenvectors must be nonzero vectors.", "answer": true },
+    { "id": "i", "label": "1i", "text": "Two eigenvectors corresponding to the same eigenvalue are always linearly dependent.", "answer": false },
+    { "id": "j", "label": "1j", "text": "Similar matrices always have exactly the same eigenvalues.", "answer": true },
+    { "id": "k", "label": "1k", "text": "Similar matrices always have exactly the same eigenvectors.", "answer": false },
+    { "id": "l", "label": "1l", "text": "The sum of two eigenvectors of a matrix A is also an eigenvector of A.", "answer": false },
+    { "id": "m", "label": "1m", "text": "The eigenvalues of an upper triangular matrix A are exactly the nonzero entries on the diagonal of A.", "answer": false },
+    { "id": "n", "label": "1n", "text": "The matrices A and A^T have the same eigenvalues, counting multiplicities.", "answer": true },
+    { "id": "o", "label": "1o", "text": "If a 5×5 matrix A has fewer than 5 distinct eigenvalues, then A is not diagonalizable.", "answer": false },
+    { "id": "p", "label": "1p", "text": "There exists a 2×2 matrix that has no eigenvectors in R^2.", "answer": true },
+    { "id": "q", "label": "1q", "text": "If A is diagonalizable, then the columns of A are linearly independent.", "answer": false },
+    { "id": "r", "label": "1r", "text": "A nonzero vector cannot correspond to two different eigenvalues of A.", "answer": true },
+    { "id": "s", "label": "1s", "text": "A (square) matrix A is invertible if and only if there is a coordinate system in which the transformation x ↦ Ax is represented by a diagonal matrix.", "answer": false },
+    { "id": "t", "label": "1t", "text": "If each vector e_j in the standard basis for R^n is an eigenvector of A, then A is a diagonal matrix.", "answer": true },
+    { "id": "u", "label": "1u", "text": "If A is similar to a diagonalizable matrix B, then A is also diagonalizable.", "answer": true },
+    { "id": "v", "label": "1v", "text": "If A and B are invertible n×n matrices, then AB is similar to BA.", "answer": true },
+    { "id": "w", "label": "1w", "text": "An n×n matrix with n linearly independent eigenvectors is invertible.", "answer": false },
+    { "id": "x", "label": "1x", "text": "If A is an n×n diagonalizable matrix, then each vector in R^n can be written as a linear combination of eigenvectors of A.", "answer": true }
+  ]
+}

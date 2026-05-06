@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import HomePage from './pages/HomePage';
@@ -57,6 +57,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/linear" element={<Navigate to="/linear/index.html" replace />} />
+          <Route path="/linear/*" element={<Navigate to="/linear/index.html" replace />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/montyhall" element={<MontyHallPage />} />

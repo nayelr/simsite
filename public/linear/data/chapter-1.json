@@ -1,0 +1,166 @@
+{
+  "id": 1,
+  "title": "Chapter 1 \u2014 Supplementary exercises",
+  "meta": {
+    "pdfPage": 105,
+    "book": "Lay, Linear Algebra and Its Applications"
+  },
+  "items": [
+    {
+      "id": "a",
+      "label": "1a",
+      "text": "Every matrix is row equivalent to a unique matrix in echelon form.",
+      "answer": false
+    },
+    {
+      "id": "b",
+      "label": "1b",
+      "text": "Any system of n linear equations in n variables has at most n solutions.",
+      "answer": false
+    },
+    {
+      "id": "c",
+      "label": "1c",
+      "text": "If a system of linear equations has two different solutions, it must have infinitely many solutions.",
+      "answer": true
+    },
+    {
+      "id": "d",
+      "label": "1d",
+      "text": "If a system of linear equations has no free variables, then it has a unique solution.",
+      "answer": false
+    },
+    {
+      "id": "e",
+      "label": "1e",
+      "text": "If an augmented matrix [A  b] is transformed into [C  d] by elementary row operations, then the equations Ax = b and Cx = d have exactly the same solution sets.",
+      "answer": true
+    },
+    {
+      "id": "f",
+      "label": "1f",
+      "text": "If a system Ax = b has more than one solution, then so does the system Ax = 0.",
+      "answer": true
+    },
+    {
+      "id": "g",
+      "label": "1g",
+      "text": "If A is an m\u00d7n matrix and the equation Ax = b is consistent for some b, then the columns of A span R^m.",
+      "answer": false
+    },
+    {
+      "id": "h",
+      "label": "1h",
+      "text": "If an augmented matrix [A  b] can be transformed by elementary row operations into reduced echelon form, then the equation Ax = b is consistent.",
+      "answer": false
+    },
+    {
+      "id": "i",
+      "label": "1i",
+      "text": "If matrices A and B are row equivalent, they have the same reduced echelon form.",
+      "answer": true
+    },
+    {
+      "id": "j",
+      "label": "1j",
+      "text": "The equation Ax = 0 has the trivial solution if and only if there are no free variables.",
+      "answer": false
+    },
+    {
+      "id": "k",
+      "label": "1k",
+      "text": "If A is an m\u00d7n matrix and the equation Ax = b is consistent for every b in R^m, then A has m pivot columns.",
+      "answer": true
+    },
+    {
+      "id": "l",
+      "label": "1l",
+      "text": "If an m\u00d7n matrix A has a pivot position in every row, then the equation Ax = b has a unique solution for each b in R^m.",
+      "answer": false
+    },
+    {
+      "id": "m",
+      "label": "1m",
+      "text": "If an n\u00d7n matrix A has n pivot positions, then the reduced echelon form of A is the n\u00d7n identity matrix.",
+      "answer": true
+    },
+    {
+      "id": "n",
+      "label": "1n",
+      "text": "If 3\u00d73 matrices A and B each have three pivot positions, then A can be transformed into B by elementary row operations.",
+      "answer": true
+    },
+    {
+      "id": "o",
+      "label": "1o",
+      "text": "If A is an m\u00d7n matrix, if the equation Ax = b has at least two different solutions, and if the equation Ax = c is consistent, then the equation Ax = c has many solutions.",
+      "answer": true
+    },
+    {
+      "id": "p",
+      "label": "1p",
+      "text": "If A and B are row equivalent m\u00d7n matrices and if the columns of A span R^m, then so do the columns of B.",
+      "answer": true
+    },
+    {
+      "id": "q",
+      "label": "1q",
+      "text": "If none of the vectors in the set S = {v1, v2, v3} in R^3 is a multiple of one of the other vectors, then S is linearly independent.",
+      "answer": false
+    },
+    {
+      "id": "r",
+      "label": "1r",
+      "text": "If {u, v, w} is linearly independent, then u, v, and w are not in R^2.",
+      "answer": true
+    },
+    {
+      "id": "s",
+      "label": "1s",
+      "text": "In some cases, it is possible for four vectors to span R^5.",
+      "answer": false
+    },
+    {
+      "id": "t",
+      "label": "1t",
+      "text": "If u and v are in R^m, then \u2212u is in Span{u, v}.",
+      "answer": true
+    },
+    {
+      "id": "u",
+      "label": "1u",
+      "text": "If u, v, and w are nonzero vectors in R^2, then w is a linear combination of u and v.",
+      "answer": false
+    },
+    {
+      "id": "v",
+      "label": "1v",
+      "text": "If w is a linear combination of u and v in R^n, then u is a linear combination of v and w.",
+      "answer": false
+    },
+    {
+      "id": "w",
+      "label": "1w",
+      "text": "Suppose that v1, v2, and v3 are in R^5, v2 is not a multiple of v1, and v3 is not a linear combination of v1 and v2. Then {v1, v2, v3} is linearly independent.",
+      "answer": false
+    },
+    {
+      "id": "x",
+      "label": "1x",
+      "text": "A linear transformation is a function.",
+      "answer": true
+    },
+    {
+      "id": "y",
+      "label": "1y",
+      "text": "If A is a 6\u00d75 matrix, the linear transformation x \u21a6 Ax cannot map R^5 onto R^6.",
+      "answer": true
+    },
+    {
+      "id": "z",
+      "label": "1z",
+      "text": "If A is an m\u00d7n matrix with m pivot columns, then the linear transformation x \u21a6 Ax is a one-to-one mapping.",
+      "answer": false
+    }
+  ]
+}

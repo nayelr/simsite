@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "title": "Chapter 3 — Supplementary exercises",
+  "meta": {
+    "pdfPage": 202,
+    "book": "Lay, Linear Algebra and Its Applications"
+  },
+  "items": [
+    { "id": "a", "label": "1a", "text": "If A is a 2×2 matrix with a zero determinant, then one column of A is a multiple of the other.", "answer": true },
+    { "id": "b", "label": "1b", "text": "If two rows of a 3×3 matrix A are the same, then det A = 0.", "answer": true },
+    { "id": "c", "label": "1c", "text": "If A is a 3×3 matrix, then det 5A = 5 det A.", "answer": false },
+    { "id": "d", "label": "1d", "text": "If A and B are n×n matrices, with det A = 2 and det B = 3, then det(A + B) = 5.", "answer": false },
+    { "id": "e", "label": "1e", "text": "If A is n×n and det A = 2, then det A^3 = 6.", "answer": false },
+    { "id": "f", "label": "1f", "text": "If B is produced by interchanging two rows of A, then det B = det A.", "answer": false },
+    { "id": "g", "label": "1g", "text": "If B is produced by multiplying row 3 of A by 5, then det B = 5 · det A.", "answer": true },
+    { "id": "h", "label": "1h", "text": "If B is formed by adding to one row of A a linear combination of the other rows, then det B = det A.", "answer": true },
+    { "id": "i", "label": "1i", "text": "det A^T = −det A.", "answer": false },
+    { "id": "j", "label": "1j", "text": "det(−A) = −det A.", "answer": false },
+    { "id": "k", "label": "1k", "text": "det A^T A ≥ 0.", "answer": true },
+    { "id": "l", "label": "1l", "text": "Any system of n linear equations in n variables can be solved by Cramer’s rule.", "answer": false },
+    { "id": "m", "label": "1m", "text": "If u and v are in R^2 and det [u  v] = 10, then the area of the triangle in the plane with vertices at 0, u, and v is 10.", "answer": false },
+    { "id": "n", "label": "1n", "text": "If A^3 = 0, then det A = 0.", "answer": true },
+    { "id": "o", "label": "1o", "text": "If A is invertible, then det A^−1 = det A.", "answer": false },
+    { "id": "p", "label": "1p", "text": "If A is invertible, then (det A)(det A^−1) = 1.", "answer": true }
+  ]
+}

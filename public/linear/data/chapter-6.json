@@ -1,0 +1,35 @@
+{
+  "id": 6,
+  "title": "Chapter 6 — Supplementary exercises",
+  "meta": {
+    "pdfPage": 390,
+    "book": "Lay, Linear Algebra and Its Applications"
+  },
+  "preambles": [
+    {
+      "beforeItem": "a",
+      "text": "The following statements refer to vectors in R^n (or R^m) with the standard inner product."
+    }
+  ],
+  "items": [
+    { "id": "a", "label": "1a", "text": "The length of every vector is a positive number.", "answer": false },
+    { "id": "b", "label": "1b", "text": "A vector v and its negative −v have equal lengths.", "answer": true },
+    { "id": "c", "label": "1c", "text": "The distance between u and v is ‖u − v‖.", "answer": true },
+    { "id": "d", "label": "1d", "text": "If r is any scalar, then ‖rv‖ = r‖v‖.", "answer": false },
+    { "id": "e", "label": "1e", "text": "If two vectors are orthogonal, they are linearly independent.", "answer": false },
+    { "id": "f", "label": "1f", "text": "If x is orthogonal to both u and v, then x must be orthogonal to u − v.", "answer": true },
+    { "id": "g", "label": "1g", "text": "If ‖u + v‖^2 = ‖u‖^2 + ‖v‖^2, then u and v are orthogonal.", "answer": true },
+    { "id": "h", "label": "1h", "text": "If ‖u − v‖^2 = ‖u‖^2 + ‖v‖^2, then u and v are orthogonal.", "answer": true },
+    { "id": "i", "label": "1i", "text": "The orthogonal projection of y onto u is a scalar multiple of y.", "answer": false },
+    { "id": "j", "label": "1j", "text": "If a vector y coincides with its orthogonal projection onto a subspace W, then y is in W.", "answer": true },
+    { "id": "k", "label": "1k", "text": "The set of all vectors in R^n orthogonal to one fixed vector is a subspace of R^n.", "answer": true },
+    { "id": "l", "label": "1l", "text": "If W is a subspace of R^n, then W and W⊥ have no vectors in common.", "answer": false },
+    { "id": "m", "label": "1m", "text": "If {v1, v2, v3} is an orthogonal set and if c1, c2, and c3 are scalars, then {c1 v1, c2 v2, c3 v3} is an orthogonal set.", "answer": true },
+    { "id": "n", "label": "1n", "text": "If a matrix U has orthonormal columns, then UU^T = I.", "answer": false },
+    { "id": "o", "label": "1o", "text": "A square matrix with orthogonal columns is an orthogonal matrix.", "answer": false },
+    { "id": "p", "label": "1p", "text": "If a square matrix has orthonormal columns, then it also has orthonormal rows.", "answer": true },
+    { "id": "q", "label": "1q", "text": "If W is a subspace, then ‖proj_W v‖^2 + ‖v − proj_W v‖^2 = ‖v‖^2.", "answer": true },
+    { "id": "r", "label": "1r", "text": "A least-squares solution of Ax = b is the vector A x̂ in Col A closest to b, so that ‖b − A x̂‖ ≤ ‖b − Ax‖ for all x.", "answer": false },
+    { "id": "s", "label": "1s", "text": "The normal equations for a least-squares solution of Ax = b are given by x̂ = (A^T A)^-1 A^T b.", "answer": false }
+  ]
+}

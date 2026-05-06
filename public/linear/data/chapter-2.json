@@ -1,0 +1,26 @@
+{
+  "id": 2,
+  "title": "Chapter 2 — Supplementary exercises",
+  "meta": {
+    "pdfPage": 177,
+    "book": "Lay, Linear Algebra and Its Applications"
+  },
+  "items": [
+    { "id": "a", "label": "1a", "text": "If A and B are m×n, then both AB^T and A^T B are defined.", "answer": true },
+    { "id": "b", "label": "1b", "text": "If AB = C and C has 2 columns, then A has 2 columns.", "answer": false },
+    { "id": "c", "label": "1c", "text": "Left-multiplying a matrix B by a diagonal matrix A, with nonzero entries on the diagonal, scales the rows of B.", "answer": true },
+    { "id": "d", "label": "1d", "text": "If BC = BD, then C = D.", "answer": false },
+    { "id": "e", "label": "1e", "text": "If AC = 0, then either A = 0 or C = 0.", "answer": false },
+    { "id": "f", "label": "1f", "text": "If A and B are n×n, then (A + B)(A − B) = A^2 − B^2.", "answer": false },
+    { "id": "g", "label": "1g", "text": "An elementary n×n matrix has either n or n+1 nonzero entries.", "answer": true },
+    { "id": "h", "label": "1h", "text": "The transpose of an elementary matrix is an elementary matrix.", "answer": true },
+    { "id": "i", "label": "1i", "text": "An elementary matrix must be square.", "answer": true },
+    { "id": "j", "label": "1j", "text": "Every square matrix is a product of elementary matrices.", "answer": false },
+    { "id": "k", "label": "1k", "text": "If A is a 3×3 matrix with three pivot positions, there exist elementary matrices E1,…,Ep such that Ep⋯E1A = I.", "answer": true },
+    { "id": "l", "label": "1l", "text": "If AB = I, then A is invertible.", "answer": false },
+    { "id": "m", "label": "1m", "text": "If A and B are square and invertible, then AB is invertible, and (AB)^-1 = A^-1 B^-1.", "answer": false },
+    { "id": "n", "label": "1n", "text": "If AB = BA and if A is invertible, then A^-1 B = BA^-1.", "answer": true },
+    { "id": "o", "label": "1o", "text": "If A is invertible and if r ≠ 0, then (rA)^-1 = rA^-1.", "answer": false },
+    { "id": "p", "label": "1p", "text": "If A is a 3×3 matrix and the equation Ax = [\n1\n0\n0\n] has a unique solution, then A is invertible.", "answer": true }
+  ]
+}

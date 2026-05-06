@@ -1,0 +1,33 @@
+{
+  "id": 7,
+  "title": "Chapter 7 — Supplementary exercises",
+  "meta": {
+    "pdfPage": 432,
+    "book": "Lay, Linear Algebra and Its Applications"
+  },
+  "preambles": [
+    {
+      "beforeItem": "a",
+      "text": "In each part, A represents an n×n matrix."
+    }
+  ],
+  "items": [
+    { "id": "a", "label": "1a", "text": "If A is orthogonally diagonalizable, then A is symmetric.", "answer": true },
+    { "id": "b", "label": "1b", "text": "If A is an orthogonal matrix, then A is symmetric.", "answer": false },
+    { "id": "c", "label": "1c", "text": "If A is an orthogonal matrix, then ‖Ax‖ = ‖x‖ for all x in R^n.", "answer": true },
+    { "id": "d", "label": "1d", "text": "The principal axes of a quadratic form x^T A x can be the columns of any matrix P that diagonalizes A.", "answer": false },
+    { "id": "e", "label": "1e", "text": "If P is an n×n matrix with orthogonal columns, then P^T = P^-1.", "answer": false },
+    { "id": "f", "label": "1f", "text": "If every coefficient in a quadratic form is positive, then the quadratic form is positive definite.", "answer": false },
+    { "id": "g", "label": "1g", "text": "If x^T A x > 0 for some x, then the quadratic form x^T A x is positive definite.", "answer": false },
+    { "id": "h", "label": "1h", "text": "By a suitable change of variable, any quadratic form can be changed into one with no cross-product term.", "answer": true },
+    { "id": "i", "label": "1i", "text": "The largest value of a quadratic form x^T A x, for ‖x‖ = 1, is the largest entry on the diagonal of A.", "answer": false },
+    { "id": "j", "label": "1j", "text": "The maximum value of a positive definite quadratic form x^T A x is the greatest eigenvalue of A.", "answer": false },
+    { "id": "k", "label": "1k", "text": "A positive definite quadratic form can be changed into a negative definite form by a suitable change of variable x = Pu, for some orthogonal matrix P.", "answer": false },
+    { "id": "l", "label": "1l", "text": "An indefinite quadratic form is one whose eigenvalues are not definite.", "answer": false },
+    { "id": "m", "label": "1m", "text": "If P is an n×n orthogonal matrix, then the change of variable x = Pu transforms x^T A x into a quadratic form whose matrix is P^-1 A P.", "answer": true },
+    { "id": "n", "label": "1n", "text": "If U is m×n with orthogonal columns, then U U^T x is the orthogonal projection of x onto Col U.", "answer": false },
+    { "id": "o", "label": "1o", "text": "If B is m×n and x is a unit vector in R^n, then ‖Bx‖ ≤ σ_1, where σ_1 is the first singular value of B.", "answer": true },
+    { "id": "p", "label": "1p", "text": "A singular value decomposition of an m×n matrix B can be written as B = PΣQ, where P is an m×m orthogonal matrix, Q is an n×n orthogonal matrix, and Σ is an m×n \"diagonal\" matrix.", "answer": true },
+    { "id": "q", "label": "1q", "text": "If A is n×n, then A and A^T A have the same singular values.", "answer": false }
+  ]
+}

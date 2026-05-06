@@ -1,0 +1,36 @@
+{
+  "id": 4,
+  "title": "Chapter 4 — Supplementary exercises",
+  "meta": {
+    "pdfPage": 279,
+    "book": "Lay, Linear Algebra and Its Applications"
+  },
+  "preambles": [
+    {
+      "beforeItem": "a",
+      "text": "In parts (a)–(f), v1, …, vp are vectors in a nonzero finite-dimensional vector space V, and S = {v1, …, vp}."
+    }
+  ],
+  "items": [
+    { "id": "a", "label": "1a", "text": "The set of all linear combinations of v1,…,vp is a vector space.", "answer": true },
+    { "id": "b", "label": "1b", "text": "If {v1,…,vp−1} spans V, then S spans V.", "answer": true },
+    { "id": "c", "label": "1c", "text": "If {v1,…,vp−1} is linearly independent, then so is S.", "answer": false },
+    { "id": "d", "label": "1d", "text": "If S is linearly independent, then S is a basis for V.", "answer": false },
+    { "id": "e", "label": "1e", "text": "If Span S = V, then some subset of S is a basis for V.", "answer": true },
+    { "id": "f", "label": "1f", "text": "If dim V = p and Span S = V, then S cannot be linearly dependent.", "answer": true },
+    { "id": "g", "label": "1g", "text": "A plane in R^3 is a two-dimensional subspace.", "answer": false },
+    { "id": "h", "label": "1h", "text": "The nonpivot columns of a matrix are always linearly dependent.", "answer": false },
+    { "id": "i", "label": "1i", "text": "Row operations on a matrix A can change the linear dependence relations among the rows of A.", "answer": true },
+    { "id": "j", "label": "1j", "text": "Row operations on a matrix can change the null space.", "answer": false },
+    { "id": "k", "label": "1k", "text": "The rank of a matrix equals the number of nonzero rows.", "answer": false },
+    { "id": "l", "label": "1l", "text": "If an m×n matrix A is row equivalent to an echelon matrix U and if U has k nonzero rows, then the dimension of the solution space of Ax = 0 is m − k.", "answer": false },
+    { "id": "m", "label": "1m", "text": "If B is obtained from a matrix A by several elementary row operations, then rank B = rank A.", "answer": true },
+    { "id": "n", "label": "1n", "text": "The nonzero rows of a matrix A form a basis for Row A.", "answer": false },
+    { "id": "o", "label": "1o", "text": "If matrices A and B have the same reduced echelon form, then Row A = Row B.", "answer": true },
+    { "id": "p", "label": "1p", "text": "If H is a subspace of R^3, then there is a 3×3 matrix A such that H = Col A.", "answer": true },
+    { "id": "q", "label": "1q", "text": "If A is m×n and rank A = m, then the linear transformation x ↦ Ax is one-to-one.", "answer": false },
+    { "id": "r", "label": "1r", "text": "If A is m×n and the linear transformation x ↦ Ax is onto, then rank A = m.", "answer": true },
+    { "id": "s", "label": "1s", "text": "A change-of-coordinates matrix is always invertible.", "answer": true },
+    { "id": "t", "label": "1t", "text": "If B = {b1,…,bn} and C = {c1,…,cn} are bases for a vector space V, then the jth column of the change-of-coordinates matrix PC←B is the coordinate vector [cj]B.", "answer": false }
+  ]
+}
